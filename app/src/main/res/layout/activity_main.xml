@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rotationX="5"
+        android:rotationY="10"
+        android:text="Primitive Calculator"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="32dp"/>
+    <LinearLayout
+        android:id="@+id/ll_input_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:padding="8dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:textSize="32sp" />
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:textSize="32sp"
+            android:gravity="center_vertical|end"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/et_input_a"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="Input A"
+            android:textSize="32sp"
+            android:textAlignment="textStart"
+            android:hint="Input A"
+            android:inputType="number"
+            android:layout_marginTop="64dp"/>
+        <EditText
+            android:id="@+id/et_input_b"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="Input B"
+            android:textSize="32sp"
+            android:textAlignment="textStart"
+            android:hint="Input B"
+            android:inputType="number"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ll_input_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:padding="8dp">
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:layout_marginEnd="8dp"/>
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Subtract"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
