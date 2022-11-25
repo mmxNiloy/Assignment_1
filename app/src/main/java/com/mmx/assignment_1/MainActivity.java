@@ -13,6 +13,7 @@ import java.text.ParseException;
 public class MainActivity extends AppCompatActivity {
     // Comps
     private EditText etInputA;
+
     private EditText etInputB;
     private TextView tvOutput;
     private Button btnAdd;
