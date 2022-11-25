@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = this.findViewById(R.id.btn_add);
         btnSub = this.findViewById(R.id.btn_sub);
         tvOutput = this.findViewById(R.id.tv_result);
+        
+        // Reset
+        etInputA.setText("");
+        etInputB.setText("");
 
         btnAdd.setOnClickListener((v) -> {
             // Get text from the edit text
